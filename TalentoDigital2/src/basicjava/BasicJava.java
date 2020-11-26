@@ -1,6 +1,18 @@
 package basicjava;
 import java.util.ArrayList;
 public class BasicJava {
+	public void fibonacci() {
+		int entry= 6;
+		int x = 0;
+		int y = 1;
+		int z = 1;
+		for (int i = 0; i < entry; i++) {
+			z = x + y;
+			x = y;
+			y = z;
+			System.out.println(z);
+		}
+	}
 	public void bubble() {
 		int n = 5;
 		int x = 0;
@@ -172,6 +184,7 @@ public class BasicJava {
 	
 	public static void main(String[] args) {
 		BasicJava test = new BasicJava();
+		test.fibonacci();
 		//test.bubble();
 		//test.imprimeNum();
 		//test.imprimeImpar();
