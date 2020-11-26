@@ -1,6 +1,24 @@
 package basicjava;
 import java.util.ArrayList;
 public class BasicJava {
+	public void bubble() {
+		int n = 5;
+		int x = 0;
+		int[] array = {2,10,1,5,7};
+		for(int i = 0; i < n; i++) {
+			for(int j = i + 1; j <n; j++) {
+				if(array[i] > array[j]) {
+					x = array[i];
+					array[i] = array[j];
+					array[j] = x;
+				}
+			}
+			
+		}
+		for(int i = 0; i < 5; i++) {
+			System.out.println(array[i]);//imprime arreglo en orden ascendente
+		}
+	}
 
 	public void imprimeNum() {
 		int i=1;
@@ -43,7 +61,7 @@ public class BasicJava {
 				max = array[i];
 			}
 		}
-		System.out.println("El m·ximo es: "+ max);
+		System.out.println("El m√°ximo es: "+ max);
 	}
 	
 	public void promArray() {
@@ -75,7 +93,7 @@ public class BasicJava {
 					sum++;
 				}
 			}
-			System.out.println("Cantidad de n˙meros mayores a "+ y +": " + sum);
+			System.out.println("Cantidad de n√∫meros mayores a "+ y +": " + sum);
 		}
 		
 		public void arrayCuadrado() {
@@ -99,12 +117,12 @@ public class BasicJava {
 			arreglo.add(10);
 			arreglo.add(-2);
 			arreglo.add(3);
-			System.out.println("Arreglo con n˙meros negativos: " + arreglo);
+			System.out.println("Arreglo con n√∫meros negativos: " + arreglo);
 			for(int i= 0; i < arreglo.size(); i++) {
 				if(arreglo.get(i) < 0) {
 					arreglo.set(i, 0);
 				}
-			}System.out.println("Arreglo sin n˙meros negativos: " + arreglo);
+			}System.out.println("Arreglo sin n√∫meros negativos: " + arreglo);
 		}
 		public void minManPro() {
 			ArrayList<Integer> arreglo = new ArrayList<Integer>();
@@ -131,7 +149,7 @@ public class BasicJava {
 			arreglo.add(max);
 			arreglo.add(min);
 			arreglo.add(prom);
-			System.out.println("Arreglo con valor mÌnimo, m·ximo y promedio: " + arreglo);
+			System.out.println("Arreglo con valor m√≠nimo, m√°ximo y promedio: " + arreglo);
 			}
 		public void lista() {
 			ArrayList<Integer> arreglo = new ArrayList<Integer>();
@@ -154,6 +172,7 @@ public class BasicJava {
 	
 	public static void main(String[] args) {
 		BasicJava test = new BasicJava();
+		//test.bubble();
 		//test.imprimeNum();
 		//test.imprimeImpar();
 		//test.imprimeSum();
